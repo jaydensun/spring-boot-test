@@ -28,7 +28,11 @@ public class DisconfConfiguration {
     @Bean
     public ReloadablePropertiesFactoryBean reloadablePropertiesFactoryBean() {
         ReloadablePropertiesFactoryBean reloadablePropertiesFactoryBean = new ReloadablePropertiesFactoryBean();
-        reloadablePropertiesFactoryBean.setLocations(Arrays.asList("remote.properties", "coefficients.properties", "remote.properties"));
+        reloadablePropertiesFactoryBean.setLocations(Arrays.asList(
+                "classpath*:remote.properties",
+                "classpath*:coefficients.properties",
+                "classpath*:remote.properties"
+        ));
         return reloadablePropertiesFactoryBean;
     }
 
