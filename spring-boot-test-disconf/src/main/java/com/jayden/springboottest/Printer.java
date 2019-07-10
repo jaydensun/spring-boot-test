@@ -20,10 +20,11 @@ public class Printer implements ApplicationListener<ContextRefreshedEvent> {
         ApplicationContext context = event.getApplicationContext();
 
         Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(() -> {
+            System.out.println();
             System.out.println(new Date());
-            System.out.println(context.getBean(Redis.class));
-            System.out.println(context.getBean(Remote.class));
-            System.out.println(context.getBean(Coefficients.class));
+            System.out.println(context.getBean(Redis.class) + " ---- DISCONF 注解");
+            System.out.println(context.getBean(Remote.class) + " ---- Spring @Value 注解");
+            System.out.println(context.getBean(Coefficients.class) + " ---- Spring xml 占位符");
         }, 0, 2, TimeUnit.SECONDS);
     }
 }

@@ -30,11 +30,11 @@
         </rollingPolicy>
     </appender>
 
-    <!-- logger name="org.hibernate.SQL" level="DEBUG" /-->
+    <logger name="com.baidu.disconf" level="DEBUG" />
 
     <!-- 日志输出级别 -->
     <!-- OFF, ERROR, WARN, INFO, DEBUG, TRACE, ALL. -->
-    <root level="ERROR">
+    <root level="INFO">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="DAILYFILE" />
     </root>

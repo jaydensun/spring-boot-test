@@ -14,7 +14,7 @@ import java.util.Properties;
 @Configuration
 public class DisconfConfiguration {
     @Bean(destroyMethod = "destroy")
-    public DisconfMgrBean getDisconfMgrBean() {
+    public static DisconfMgrBean getDisconfMgrBean() {
         DisconfMgrBean disconfMgrBean = new DisconfMgrBean();
         disconfMgrBean.setScanPackage("com.jayden.springboottest.domain");
         return disconfMgrBean;
@@ -29,7 +29,6 @@ public class DisconfConfiguration {
     public ReloadablePropertiesFactoryBean reloadablePropertiesFactoryBean() {
         ReloadablePropertiesFactoryBean reloadablePropertiesFactoryBean = new ReloadablePropertiesFactoryBean();
         reloadablePropertiesFactoryBean.setLocations(Arrays.asList(
-                "classpath*:remote.properties",
                 "classpath*:coefficients.properties",
                 "classpath*:remote.properties"
         ));
@@ -37,7 +36,7 @@ public class DisconfConfiguration {
     }
 
     @Bean
-    public ReloadingPropertyPlaceholderConfigurer propertyConfigurer(@Qualifier("reloadablePropertiesFactoryBean") Properties properties) {
+    public static ReloadingPropertyPlaceholderConfigurer propertyConfigurer(@Qualifier("reloadablePropertiesFactoryBean") Properties properties) {
         ReloadingPropertyPlaceholderConfigurer configurer = new ReloadingPropertyPlaceholderConfigurer();
         configurer.setIgnoreResourceNotFound(true);
         configurer.setIgnoreUnresolvablePlaceholders(true);
