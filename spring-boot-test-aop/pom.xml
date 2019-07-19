@@ -9,13 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-test-disconf</artifactId>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
-        <spring-boot-dependencies.version>1.5.20.RELEASE</spring-boot-dependencies.version>
-    </properties>
+    <artifactId>spring-boot-test-aop</artifactId>
 
     <dependencies>
         <dependency>
