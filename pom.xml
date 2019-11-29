@@ -12,6 +12,7 @@
         <module>spring-boot-test-configuration-properties</module>
         <module>spring-boot-test-disconf</module>
         <module>spring-boot-test-aop</module>
+        <module>spring-boot-test-elastic-job</module>
     </modules>
 
     <properties>

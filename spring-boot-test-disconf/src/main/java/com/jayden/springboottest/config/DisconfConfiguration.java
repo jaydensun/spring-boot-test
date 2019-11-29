@@ -16,7 +16,7 @@ public class DisconfConfiguration {
     @Bean(destroyMethod = "destroy")
     public static DisconfMgrBean getDisconfMgrBean() {
         DisconfMgrBean disconfMgrBean = new DisconfMgrBean();
-        disconfMgrBean.setScanPackage("com.jayden.springboottest.domain");
+        disconfMgrBean.setScanPackage("com.jayden.springboottest");
         return disconfMgrBean;
     }
 
