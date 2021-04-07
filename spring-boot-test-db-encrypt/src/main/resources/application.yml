@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://xxx:33066/xxx
+    username: root
+    password: deaya80Iw/jWpq7b5MbGlVwXueyAmPKDBJFLm/FWzDII2h9a8IManOYEg6ionYHH+1W6EY4wLk30LkY59Yk9Ow==
+    druid:
+      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOrA673+Y64bTBchLgyFVen9CEdBKszT8rEZfpxuCzrh+KFyHEiR97NUO2fInX3BgjgDKcA+ZDRLh1BHAOZDrgkCAwEAAQ==
+      filters: config

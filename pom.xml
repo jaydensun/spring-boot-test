@@ -15,6 +15,7 @@
         <module>spring-boot-test-elastic-job</module>
         <module>spring-boot-test-webmvc</module>
         <module>spring-boot-test-db</module>
+        <module>spring-boot-test-db-encrypt</module>
     </modules>
 
     <properties>
